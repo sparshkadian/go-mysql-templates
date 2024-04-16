@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width='device-width', initial-scale=1.0" />
+    <title>Task Manager | Tasks</title>
+  </head>
+  <body>
+    <h1>The Tasks Are:</h1>
+    {{if .}} {{range .}}
+    <div class="task-details">
+      <p><strong>TaskId:</strong> {{.TaskId}}</p>
+      <p><strong>Task:</strong> {{.Task}}</p>
+      <p><strong>Username:</strong> {{.Username}}</p>
+      <hr />
+    </div>
+    {{end}} {{else}}
+    <h1>No Tasks to display</h1>
+    {{end}}
+  </body>
+</html>
